@@ -1,0 +1,637 @@
+                body {
+                    background-color: #E6E6E6;
+                    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                }
+                
+                .page aside {
+                    background-color: #E6E6E6;
+                    width: 100%;
+                    height: 100vh;
+                    position: fixed;
+                    /* background-color: red; */
+                    border-right-color: #ccc;
+                    border-right-style: solid;
+                    border-right-width: 1px;
+                    z-index: 1000;
+                    left: -2500px;
+                    transition: 2s;
+                }
+                
+                .page .aside.active {
+                    left: 0px;
+                    transition: 2s;
+                }
+                
+                .page .toogle {
+                    display: none;
+                }
+                
+                .page aside .image {
+                    text-align: center;
+                    margin: 15px;
+                }
+                
+                .page aside .image img {
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 50%;
+                    border: solid 2px #ccc;
+                    padding: 10px;
+                }
+                
+                .page aside .text {
+                    text-align: center;
+                    line-height: 2;
+                }
+                
+                .page aside .text h3 {
+                    color: black;
+                    font-weight: bold;
+                }
+                
+                .page aside .text h6 {
+                    color: #27AE60;
+                    font-weight: bold;
+                }
+                
+                .page aside nav ul {
+                    list-style-type: none;
+                    width: 100%;
+                }
+                
+                .page aside nav ul li {
+                    background-color: #ccc;
+                    padding: 10px;
+                    margin: 10px 10px;
+                    border-radius: 19px;
+                    text-align: center;
+                    transition: 1s;
+                    border: solid 2px #ccc;
+                    margin-right: 30px;
+                }
+                
+                .page aside nav ul li:hover {
+                    background-color: rgb(204, 204, 204, 10%);
+                    padding: 10px;
+                    margin: 10px 10px;
+                    border-radius: 19px;
+                    text-align: center;
+                }
+                
+                .page aside nav ul li a {
+                    color: grey;
+                    font-weight: bold;
+                    display: block;
+                    text-decoration: none;
+                }
+                
+                .page aside nav ul li a.active {
+                    color: white;
+                    font-weight: bold;
+                    display: block;
+                    text-decoration: none;
+                }
+                
+                .page .content {
+                    position: relative;
+                    width: 100%;
+                }
+                
+                .page .toogle {
+                    display: block;
+                    position: fixed;
+                    left: 30px;
+                    top: 20px;
+                    z-index: 1000;
+                    transition: 1s;
+                    cursor: pointer;
+                    font-size: 20px;
+                }
+                
+                .page .dark {
+                    display: block;
+                    position: fixed;
+                    right: 30px;
+                    top: 20px;
+                    z-index: 1000;
+                    transition: 1s;
+                    cursor: pointer;
+                    font-size: 20px;
+                    font-size: 30px;
+                    background-color: #ccc;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                
+                .page .dark.active {
+                    background-color: black;
+                    color: #27AE60;
+                }
+                
+                .page .content {
+                    width: 100%;
+                    /* height: 100vh; */
+                }
+                
+                .page .content .frist {
+                    text-align: center;
+                    position: relative;
+                    top: 100px;
+                }
+                
+                .page .content .frist h4 {
+                    color: black;
+                    font-weight: bold;
+                    font-size: 50px;
+                }
+                
+                .page .content .frist h5 {
+                    color: #27AE60;
+                    margin: 10px;
+                    font-weight: bold;
+                    animation: move 10s linear infinite;
+                }
+                
+                .page .content .frist .icon {
+                    background-color: #ddd;
+                    width: fit-content;
+                    margin: 10px auto;
+                    border-radius: 10px;
+                }
+                
+                .page .content .frist .icon a i {
+                    background-color: white;
+                    padding: 10px;
+                    border-radius: 10px;
+                    margin: 15px 15px;
+                    cursor: pointer;
+                    transition: 1s;
+                    color: black;
+                }
+                
+                .page .content .frist .icon a i:hover {
+                    color: #27AE60;
+                }
+                
+                .page .about {
+                    position: relative;
+                    top: 130px;
+                    padding: 10px;
+                }
+                
+                .page .about h3 {
+                    text-align: center;
+                    margin: 10px;
+                    color: black;
+                    font-weight: bold;
+                    font-size: 30px;
+                }
+                
+                .page .about h3 span {
+                    color: #27AE60;
+                    font-weight: bold;
+                    font-size: 30px;
+                }
+                
+                .page .about .content .boxone {
+                    background-color: white;
+                }
+                
+                .page .about .row .send {
+                    margin-top: 10px;
+                }
+                
+                .page .about .row .send a {
+                    text-decoration: none;
+                    background-color: #ccc;
+                    padding: 15px;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    color: black;
+                    font-weight: bold;
+                    margin-top: 20px;
+                    transition: 1s;
+                }
+                
+                .page .about .row .send:hover a {
+                    color: #27AE60;
+                }
+                
+                .page .about .boxone.active {
+                    background-color: black !important;
+                    color: #27AE60 !important;
+                    transition: 1s;
+                    border: solid 1px white;
+                }
+                
+                .page .about .boxtwo.active {
+                    background-color: black !important;
+                    color: #27AE60 !important;
+                    transition: 1s;
+                    border: solid 1px white;
+                }
+                
+                .page .about .boxthree.active {
+                    background-color: black !important;
+                    color: #27AE60 !important;
+                    transition: 1s;
+                    border: solid 1px white;
+                }
+                
+                .page .about .boxone h3.active {
+                    color: white;
+                }
+                
+                .page .about .boxtwo h3.active {
+                    color: white;
+                }
+                
+                .page .about .boxthree h3.active {
+                    color: white;
+                }
+                
+                .page .skill {
+                    position: relative;
+                    padding: 10px;
+                    top: 150px;
+                }
+                
+                .page .skill .boxskillone,
+                .page .skill .boxskilltwo,
+                .page .skill .boxskillthree,
+                .page .skill .boxskillfour {
+                    background-color: white !important;
+                }
+                
+                .page .skill .boxskillone.active,
+                .page .skill .boxskilltwo.active,
+                .page .skill .boxskillthree.active,
+                .page .skill .boxskillfour.active {
+                    background-color: black !important;
+                    color: white;
+                    border: solid 2px white;
+                    transition: 1s;
+                }
+                
+                .page .services {
+                    position: relative;
+                    top: 180px;
+                }
+                
+                .page .services h3 {
+                    text-align: center;
+                    margin: 10px;
+                    color: black;
+                    font-weight: bold;
+                    font-size: 30px;
+                }
+                
+                .page .services h3 span {
+                    color: #27AE60;
+                    font-weight: bold;
+                    font-size: 30px;
+                }
+                
+                .page .services .content .boxserone,
+                .page .services .content .boxsertwo,
+                .page .services .content .boxserthree {
+                    position: relative;
+                    overflow: hidden;
+                    color: black;
+                    background-color: white;
+                    transition: 1s;
+                }
+                
+                .page .services .content .boxserone.active,
+                .page .services .content .boxsertwo.active,
+                .page .services .content .boxserthree.active {
+                    position: relative;
+                    overflow: hidden;
+                    color: white;
+                    background-color: black;
+                    border: solid 1px white;
+                }
+                
+                .page .services .content .boxserone::before {
+                    content: "";
+                    position: absolute;
+                    width: 110px;
+                    height: 100px;
+                    border-radius: 50%;
+                    right: -50px;
+                    top: -50px;
+                    background-color: #27AE60;
+                    /* clip-path: circle(30.0% at 100% 0); */
+                    transition: 1s;
+                    color: white;
+                }
+                
+                .page .services .content .boxserone:hover::before {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 0px;
+                    color: white;
+                    right: 0;
+                    top: 0;
+                    background-color: transparent;
+                }
+                
+                .page .services .content .boxsertwo::before {
+                    content: "";
+                    position: absolute;
+                    width: 110px;
+                    height: 100px;
+                    border-radius: 50%;
+                    right: -50px;
+                    top: -50px;
+                    background-color: #27AE60;
+                    /* clip-path: circle(30.0% at 100% 0); */
+                    transition: 1s;
+                    color: white;
+                }
+                
+                .page .services .content .boxsertwo:hover::before {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 0px;
+                    color: white;
+                    right: 0;
+                    top: 0;
+                    background-color: transparent;
+                }
+                
+                .page .services .content .boxserthree::before {
+                    content: "";
+                    position: absolute;
+                    width: 110px;
+                    height: 100px;
+                    border-radius: 50%;
+                    right: -50px;
+                    top: -50px;
+                    background-color: #27AE60;
+                    /* clip-path: circle(30.0% at 100% 0); */
+                    transition: 1s;
+                    color: white;
+                }
+                
+                .page .services .content .boxserthree:hover::before {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 0px;
+                    color: white;
+                    right: 0;
+                    top: 0;
+                    background-color: transparent;
+                }
+                
+                .page .portfilo {
+                    position: relative;
+                    top: 200px;
+                }
+                
+                .page .portfilo h3 {
+                    padding-top: 10px;
+                    color: black;
+                }
+                
+                .page .portfilo h3.active {
+                    color: white;
+                }
+                
+                .page .portfilo h3 span {
+                    color: #27AE60;
+                    font-weight: bold;
+                    font-size: 30px;
+                }
+                
+                .page .portfilo .content .row .image {
+                    position: relative;
+                    overflow: hidden;
+                    cursor: pointer;
+                }
+                
+                .page .portfilo .content .row .image .textone {
+                    background-color: #ddd;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    transition: 2s;
+                    top: 0px;
+                    left: 0px;
+                    transform: translateY(-300px);
+                }
+                
+                .page .portfilo .content .row .image:hover .textone {
+                    transform: translateY(0px);
+                    left: 0px;
+                }
+                
+                .page .portfilo .content .row .image .textone h5 {
+                    color: black;
+                    font-weight: bold;
+                    font-size: 30px;
+                }
+                
+                .page .portfilo .content .row .image .textone h5.active {
+                    color: #27AE60;
+                    font-weight: bold;
+                    font-size: 30px;
+                }
+                
+                .page .portfilo .content .row .image .textone a {
+                    color: black;
+                    font-weight: bold;
+                    text-decoration: none;
+                    background-color: white;
+                    margin: 10px 10px;
+                    padding: 10px;
+                    border-radius: 10px;
+                }
+                
+                .page .portfilo h3.active {
+                    padding-top: 10px;
+                    color: white;
+                }
+                
+                .page .infoo {
+                    position: relative;
+                    top: 260px;
+                    text-align: center;
+                    border-top: solid 1px grey;
+                }
+                
+                .page .infoo h3 {
+                    color: black;
+                }
+                
+                .page .infoo h3.active {
+                    color: white;
+                }
+                
+                .page .infoo h3 span {
+                    color: #27AE60;
+                    font-weight: bold;
+                    font-size: 30px;
+                }
+                /*
+            /* dark mode */
+                
+                .page aside.change {
+                    background-color: black;
+                    color: white;
+                }
+                
+                .page .dark.active {
+                    background-color: black;
+                    color: #27AE60;
+                    transition: 1s;
+                    border: solid 2px white;
+                }
+                
+                body.active {
+                    background-color: black;
+                    transition: 1s;
+                }
+                
+                .page .toogle .active {
+                    display: block;
+                    position: fixed;
+                    left: 30px;
+                    top: 20px;
+                    z-index: 1000;
+                    transition: 1s;
+                    cursor: pointer;
+                    font-size: 20px;
+                    color: white;
+                }
+                
+                .page .content .frist h4.active {
+                    color: white;
+                    font-weight: bold;
+                    font-size: 50px;
+                }
+                
+                .page .content .frist h5 {
+                    color: #27AE60;
+                    margin: 10px;
+                    font-weight: bold;
+                    animation: move 10s linear infinite;
+                    transition: 1s;
+                }
+                
+                .page .about h3.active {
+                    text-align: center;
+                    margin: 10px;
+                    color: white;
+                    font-weight: bold;
+                    font-size: 30px;
+                }
+                
+                .page .about h3.text-start .active {
+                    color: white;
+                }
+                
+                .page .about h5.pragraph.active {
+                    color: white;
+                    transition: 1s;
+                }
+                
+                .page .services h3.active {
+                    text-align: center;
+                    margin: 10px;
+                    color: white;
+                    font-weight: bold;
+                    font-size: 30px;
+                }
+                /* ------------------------------------------------------- */
+                /* start form */
+                /* end form */
+                
+                .page .con {
+                    position: relative;
+                    top: 240px;
+                }
+                
+                .page .con input.form-control {
+                    width: 100%;
+                    border: solid 2px white;
+                    border-radius: 10px;
+                }
+                
+                .page .con input.form-controlonee {
+                    width: 100%;
+                    border: solid 2px white;
+                    border-radius: 10px;
+                    padding: 10px;
+                    transition: 1s;
+                }
+                
+                .page .con input.form-controlone {
+                    width: 100%;
+                    border: solid 2px white;
+                    border-radius: 10px;
+                    padding: 10px;
+                    transition: 1s;
+                }
+                
+                .page .con input.form-controltwo {
+                    width: 100%;
+                    border: solid 2px white;
+                    border-radius: 10px;
+                    padding: 10px;
+                    transition: 1s;
+                }
+                
+                .page .con input.active {
+                    background-color: black;
+                    color: white;
+                    padding: 10px;
+                    border: solid 2px white;
+                    border-radius: 10px;
+                    padding: 10px;
+                    transition: 1s;
+                }
+                
+                 ::placeholder {
+                    color: grey;
+                }
+                
+                .hidden {
+                    .page aside {
+                        background-color: #E6E6E6;
+                        width: 100%;
+                        height: 100vh;
+                        position: fixed;
+                        /* background-color: red; */
+                        border-right-color: #ccc;
+                        border-right-style: solid;
+                        border-right-width: 1px;
+                        z-index: 1000;
+                        left: -2500px;
+                        transition: 2s;
+                    }
+                }
+                
+                .page .textmessage textarea {
+                    width: 100%;
+                    height: 100%;
+                    resize: none;
+                    border-radius: 5px;
+                    border: solid 2px white;
+                }
